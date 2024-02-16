@@ -2,13 +2,14 @@
 
 import { Routes, Route } from 'react-router-dom';
 import Header from './Component/Header/Header';
-import Home from './images/Home/Home';
+
+import Main from './Component/Main/Main';
 function App() {
   return (
     <div className=''>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Main/>}/>
       </Routes>
   
     
