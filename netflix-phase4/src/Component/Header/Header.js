@@ -13,13 +13,14 @@ const Header = () => {
   return (
     <div className=''>
       <div className='flex header w-full items-center justify-between  absolute z-[100]'>
-        <Link to='/'><div className=' font-bold text-white-600 px-4 py-2 text-5xl cursor-pointer' >
-            <img src={netflixlogo} className='w-40' alt='netflex logo'  />  </div></Link>
-            <Link to='/movies/'><div className='text-white'>movies</div></Link>
-            <Link to='/tvshows/'><div className='text-white'>Tvshows</div></Link>
-            <Link to='/latest/'><div className='text-white'>latest</div></Link>
-           <Link to='mylist'> <div className='text-white'>mylist</div></Link>
-            <Link to='/languages/'><div className='text-white'>Browse by languages</div></Link>
+       <div className='flex justify-between items-center'>
+       <Link to='/'><div className=' font-bold text-white-600 px-4 py-2 text-5xl mr-4 cursor-pointer' ><img src={netflixlogo} className='w-40' alt='netflex logo'/>  </div></Link>
+            <Link to='/movies/'><div className='text-white mr-4'>movies</div></Link>
+            <Link to='/tvshows/'><div className='text-white mr-4'>Tvshows</div></Link>
+            <Link to='/latest/'><div className='text-white mr-4'>latest</div></Link>
+           <Link to='mylist'> <div className='text-white mr-4'>mylist</div></Link>
+            <Link to='/languages/'><div className='text-white mr-4'>Browse by languages</div></Link>
+       </div>
        
         <div className='flex text-white'>
         <Link to='/search/'><div className=' text-sm mr-2 py-2  text-blue-400'><SearchRoundedIcon/></div></Link>
