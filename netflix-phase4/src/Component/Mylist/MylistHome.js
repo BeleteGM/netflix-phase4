@@ -1,12 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import {FaHeart, FaRegHeart} from 'react-icons/fa';
+
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md';
 import $ from "jquery";
+
 // import {Mdchvernright, Mdchvernleft} from '@mui/icons-material';
 
 
-const Homelist = ({title, FETCHURL}) => {
+const MylistHome = ({title, FETCHURL}) => {
     const [moviest, setmoviest]= useState([]);
     const [like, setlike]=useState(false);
     useEffect(()=>{
@@ -32,6 +34,7 @@ const Homelist = ({title, FETCHURL}) => {
 
   return (
     <>
+    
       <h1 className='text-blue-200  md:text-2xl p-5'>{title}</h1>
       <div className='relative flex item-center group'>
         {/* <div className=''><Mdchvernleft className='text-white rounded-full bg-blue-400 p-4'/> */}
@@ -64,4 +67,4 @@ const Homelist = ({title, FETCHURL}) => {
 }
 
 
-export default Homelist;
+export default MylistHome;

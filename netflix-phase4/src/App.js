@@ -3,12 +3,25 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './Component/Header/Header';
 import Main from './Component/Main/Main';
+import Login from './Component/Loginpage/Login';
+import Signup from './Component/Loginpage/Signup';
+import Account from './Component/Loginpage/Account';
+import Movies from './Component/Movies/Movies';
+import Tvshows from './Component/TVshows/TVshows';
+import Latest from './Component/Latest/Latest';
+import Mylist from './Component/Mylist/Mylist'
 function App() {
   return (
     <div className=''>
       <Header/>
       <Routes>
         <Route path="/" element={<Main/>}/>
+        <Route path="/Movies/" element={<Movies/>}/>
+        <Route path='/tvshows/' element={<Tvshows/>}/>
+        <Route path="/mylist/" element={<Mylist/>}/>
+        <Route path="/login/" element={<Login/>}/>
+        <Route path="/signup/" element={<Signup/>}/>
+        <Route path="/account/" element={<Account/>}/>
       </Routes>
   
     
