@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import {FaHeart, FaRegHeart} from 'react-icons/fa';
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md';
 import $ from "jquery";
-import MovieTrailer from 'movie-trailer';
-import youtube from  'react-youtube';
-import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer'
+import YouTube from  'react-youtube';
+
 // import {Mdchvernright, Mdchvernleft} from '@mui/icons-material';
 
 
@@ -38,7 +38,7 @@ const Homelist = ({title, FETCHURL}) => {
           settrailer('');
         }
         else{
-          MovieTrailer(items?.title || items?.name ||items?.orginalname)
+          movieTrailer(items?.title || items?.name ||items?.orginalname)
           .then((url)=>{
             console.log(url);
             const urlparms= new URLSearchParams(new URL(url).search);
@@ -49,26 +49,25 @@ const Homelist = ({title, FETCHURL}) => {
         }
       }
       const opts = {
-        height: '390',
+        height: '600',
         width: '100%',
         playerVars: {
-         
-          autoplay: 1,
+         autoplay:1,
         }
       }
   return (
     <>
       <h1 className='text-blue-200  md:text-2xl p-5'>{title}</h1>
       <div className='relative flex item-center group'>
-        {/* <div className=''><Mdchvernleft className='text-white rounded-full bg-blue-400 p-4'/> */}
     <MdChevronLeft size={40} onClick={scrollLeft} className='bg-gray-200 rounded-full text-blue-300 opacity-100 group-hover:block hidden'/>
         <div id ={'slider'} className='w-full h-full overflow-x-scroll scroll-smooth whitespace-nowrap scrollbar-hide relative'>
-    
+        <div className=' w-full  ' style={{padding:'' }}>{trailer && <YouTube videoId={trailer} opts={opts}/>}
+</div>
             {moviest.map((items, id)=>(
 <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[260px] inline-block cursor-pointer transition-transform  relative top-0 left-0 p-2  '>
-<img  src={`https://image.tmdb.org/t/p/w500/${items?.backdrop_path}`} className='w-full overflow-x-auto h-auto hover:scale-110 block' alt={items?.title} onClick={() => handleclick(items)}/>
-<div style={{padding:'40px' }}>{trailer && <YouTube videoId={trailer} opts={opts}/>}
-</div>
+<img  src={`https://image.tmdb.org/t/p/w500/${items?.backdrop_path}`} className='w-full overflow-x-auto h-auto hover:scale-110 block' alt={items?.title} onClick={() => handleclick(items)} target='_top'/>
+
+
 
 
 <div className='w-full absolute top-5 left-0 text-white opacity-0 hover:opacity-100 font-bold'>
@@ -87,7 +86,9 @@ const Homelist = ({title, FETCHURL}) => {
         {/* <Mdchvernright className="h-5 w-5 text-blue-500 right-0 " /> */}
         {/* </div> */}
         <MdChevronRight onClick={scrollright} size={40} className='bg-gray-200 rounded-full text-blue-300 opacity-50 right-0 items-center  group-hover:block hidden' />
+
       </div>
+      
     </>
   );
 }
