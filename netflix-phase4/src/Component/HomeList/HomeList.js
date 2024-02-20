@@ -55,6 +55,8 @@ const Homelist = ({title, FETCHURL}) => {
          autoplay:1,
         }
       }
+       
+    
   return (
     <>
       <h1 className='text-blue-200  md:text-2xl p-5'>{title}</h1>
@@ -64,7 +66,7 @@ const Homelist = ({title, FETCHURL}) => {
         <div className=' w-full  ' style={{padding:'' }}>{trailer && <YouTube videoId={trailer} opts={opts}/>}
 </div>
             {moviest.map((items, id)=>(
-<div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[260px] inline-block cursor-pointer transition-transform  relative top-0 left-0 p-2  '>
+<div className='w-[400px] sm:w-[400px] sm:mx-auto mx-auto md:w-[240px] lg:w-[260px] md:inline-block cursor-pointer transition-transform  relative top-0 left-0 p-2 sm:block '>
 <img  src={`https://image.tmdb.org/t/p/w500/${items?.backdrop_path}`} className='w-full overflow-x-auto h-auto hover:scale-110 block' alt={items?.title} onClick={() => handleclick(items)} target='_top'/>
 
 
