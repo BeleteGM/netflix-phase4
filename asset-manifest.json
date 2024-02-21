@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BeleteGM.github.io/netflix-phase4/static/css/main.23bd0183.css",
+    "main.js": "/BeleteGM.github.io/netflix-phase4/static/js/main.3620530d.js",
+    "static/media/ET-en-20240212-popsignuptwoweeks-perspective_alpha_website_small.jpg": "/BeleteGM.github.io/netflix-phase4/static/media/ET-en-20240212-popsignuptwoweeks-perspective_alpha_website_small.8fa7a3eee61dc32dc62c.jpg",
+    "static/media/Netflix_Logo_PMS (3) copy.png": "/BeleteGM.github.io/netflix-phase4/static/media/Netflix_Logo_PMS (3) copy.303904f75553a51bbf31.png",
+    "index.html": "/BeleteGM.github.io/netflix-phase4/index.html",
+    "main.23bd0183.css.map": "/BeleteGM.github.io/netflix-phase4/static/css/main.23bd0183.css.map",
+    "main.3620530d.js.map": "/BeleteGM.github.io/netflix-phase4/static/js/main.3620530d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23bd0183.css",
+    "static/js/main.3620530d.js"
+  ]
+}
