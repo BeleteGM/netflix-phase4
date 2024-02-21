@@ -62,14 +62,14 @@ const Tvshows = ({title, FETCHURL}) => {
     <TvshowsBanner/>
  
       <h1 className='text-blue-200  md:text-2xl p-5 pt-10'>{title}</h1>
-      <div className='relative flex item-center group mx-20'>
+      <div className=' flex item-center group mx-20'>
         {/* <div className=''><Mdchvernleft className='text-white rounded-full bg-blue-400 p-4'/> */}
         
-        <div id ={'slider'} className='w-full h-full  absolute'>
+        <div id ={'slider'} className='w-full h-full'>
         <div className=' w-full  ' style={{padding:'' }}>{trailer && <YouTube videoId={trailer} opts={opts}/>}</div>
         
             {moviest.map((items, id)=>(
-<div className='w-[400px] sm:w-[400px] md:w-[400px] lg:w-[300px] md:inline-block xsm: block cursor-pointer transition-transform  relative  p-2 mx-auto '>
+<div className='w-[400px] sm:w-[400px] md:w-[400px] lg:w-[300px] md:inline-block xsm: block cursor-pointer transition-transform    p-2 mx-auto '>
 <img  src={`https://image.tmdb.org/t/p/w500/${items?.backdrop_path}`} className='w-full h-auto hover:scale-110 block' alt={items?.title} onClick={() => handleclick(items)}/>
 
 <div className='w-full absolute top-5 left-0 text-white opacity-0 hover:opacity-100 font-bold'>

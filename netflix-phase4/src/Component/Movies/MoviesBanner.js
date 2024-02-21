@@ -54,7 +54,7 @@ const MoviesBanner = () => {
     <>
       <div className='w-full h-[850px]  top-0 left-0' >
       <div className=' w-full  ' style={{padding:'' }}>{trailer && <YouTube videoId={trailer} opts={opts}/>}</div>
-    <div className='w-full h-full bg-gradient-to-r from-black animate-spin '>  <img src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} className='' alt={movie?.title}/></div>
+    <div className='w-full h-full bg-gradient-to-r from-black  '>  <img src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} className='' alt={movie?.title}/></div>
       
       <div className='absolute top-[20%] h-[550] w-full '>
       <p className=' px-10 py-0 text-white font-bold  text-2xl md:text-5xl sm:hidden'>{movie?.title}</p>

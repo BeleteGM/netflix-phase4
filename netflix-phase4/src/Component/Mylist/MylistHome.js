@@ -36,13 +36,13 @@ const MylistHome = ({title, FETCHURL}) => {
     <>
     
       <h1 className='text-blue-200  md:text-2xl p-5'>{title}</h1>
-      <div className='relative flex item-center group'>
+      <div className=' sm:block flex item-center group mx-100'>
         {/* <div className=''><Mdchvernleft className='text-white rounded-full bg-blue-400 p-4'/> */}
     <MdChevronLeft size={40} onClick={scrollLeft} className='bg-gray-200 rounded-full text-blue-300 opacity-100 group-hover:block hidden'/>
-        <div id ={'slider'} className='w-full h-full overflow-x-scroll scroll-smooth whitespace-nowrap scrollbar-hide relative'>
+        <div id ={'slider'} className='w-full h-full scrollbar-hide '>
     
             {moviest.map((items, id)=>(
-<div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[260px] inline-block cursor-pointer transition-transform  relative top-0 left-0 p-2  '>
+<div className='w-[400px] sm:w-[400px] md:w-[240px] lg:w-[260px] md:inline-block sm:mx-auto sm:block cursor-pointer transition-transform  mx-100 top-0 left-0 p-2  '>
 <img  src={`https://image.tmdb.org/t/p/w500/${items?.backdrop_path}`} className='w-full overflow-x-auto h-auto hover:scale-110 block' alt={items?.title}/>
 
 <div className='w-full absolute top-5 left-0 text-white opacity-0 hover:opacity-100 font-bold'>
