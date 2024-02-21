@@ -15,7 +15,7 @@ const Header = () => {
    
     try {
       await logOut()
-      Navigate('/')
+      Navigate('/signup')
     } catch (error) {
       console.log(error);
     }
