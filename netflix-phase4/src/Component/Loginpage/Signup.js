@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { useAuth } from '../AutoContext';
+import { UserAuth } from '../AutoContext';
 import { Link, useNavigate } from 'react-router-dom';
 import bannerimage from '../../images/Home/ET-en-20240212-popsignuptwoweeks-perspective_alpha_website_small.jpg';
 
 const Signup = () => {
-  const [FirstName, setFirstName]=useState('');
-  const [SecondName, setSecondName]=useState('');
+  // const [FirstName, setFirstName]=useState('');
+  // const [SecondName, setSecondName]=useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
- const    signUp  = useAuth();
+ const   {user, signUp}  = UserAuth();
   const navigate = useNavigate();
 
-  const handleEvent = async (user) => {
-    user.preventDefault();
+  const handleEvent = async (e) => {
+    e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       console.log(error);
     }
@@ -32,7 +32,7 @@ const Signup = () => {
                 <h1 className='font-bold sm:text-3xl text-center text-white'>Sign Up</h1>
 
                 <form className='flex flex-col py-6 ' onSubmit={handleEvent}>
-                <input
+                {/* <input
                     onChange={(e) => setFirstName(e.target.value)}
                     className='my-3 py-2 bg-gray-600 rounded'
                     type='text'
@@ -45,7 +45,7 @@ const Signup = () => {
                     type='text'
                     placeholder='SecondName'
                     autoComplete='SecondName'
-                  />
+                  /> */}
                   <input
                     onChange={(e) => setEmail(e.target.value)}
                     className='my-3 py-2 bg-gray-600 rounded'
