@@ -40,7 +40,9 @@ const Header = () => {
       {user?.email ?(
         <>
         <Link to='/Account/' > <div> <button className=' text-sm px-6 py-2 mr-4 bg-blue-400 rounded-full cursor-pointer'>Account</button></div></Link>
-        <div><Link to='/signup/' ><button onClick={handleclick} className='text-sm px-6 py-2 mr-4 rounded-full border-red-700 bg-red-400 cursor-pointer'>Logout</button></Link></div>
+        <div><Link to='/signup/' >
+          <button onClick={handleclick} className='text-sm px-6 py-2 mr-4 rounded-full border-red-700 bg-red-400 cursor-pointer'>Logout</button></Link></div>
+        
         </>
       ):(
         <>
@@ -50,6 +52,14 @@ const Header = () => {
       )
       }
         </div>
+        <select className='overflow-x-visible overflow-y-visible'>
+      <option>abebe</option>
+      <option>all</option>
+      <option>All department</option>
+      <option>course</option>
+      <option>steps</option>
+      
+    </select>
        
       </div>
     </div>

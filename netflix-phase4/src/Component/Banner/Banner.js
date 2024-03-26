@@ -14,6 +14,7 @@ const Banner = () => {
       .then((response)=>{
         setmovies(response.data.results);
       })
+      
 
 
     },[])
@@ -37,6 +38,7 @@ const Banner = () => {
           console.log(url);
           const urlparms= new URLSearchParams(new URL(url).search);
           console.log(urlparms);
+
           console.log(urlparms.get('v'));
           settrailer(urlparms.get('v'))
         })
@@ -51,7 +53,9 @@ const Banner = () => {
     }
 
   return (
+
     <>
+   
       <div className='w-full h-[850px]  top-0 left-0' >
     <div className='w-full h-full bg-gradient-to-r from-black animate-spin '>  <img src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} className='' alt={movie?.title} /></div>
     <div className='absolute top-0 w-full h-[650px]' style={{padding:'' }}>{trailer && <YouTube videoId={trailer} opts={opts}/>}

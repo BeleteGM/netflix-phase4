@@ -21,7 +21,7 @@ function App() {
       
      <AuthContextProvider>
      <Header/>
-      {/* <Header2/> */}
+      
       {/* <Navbar/> */}
       <Routes>
         <Route path="/" element={<Main/>}/>
