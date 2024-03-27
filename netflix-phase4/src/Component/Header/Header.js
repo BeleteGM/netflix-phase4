@@ -52,14 +52,7 @@ const Header = () => {
       )
       }
         </div>
-        <select className='overflow-x-visible overflow-y-visible'>
-      <option>abebe</option>
-      <option>all</option>
-      <option>All department</option>
-      <option>course</option>
-      <option>steps</option>
-      
-    </select>
+       
        
       </div>
     </div>
